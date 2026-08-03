@@ -3,18 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
 <title>Privacy Policy — SEO_Next</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23155dfc%22/><text x=%2250%22 y=%2268%22 font-size=%2258%22 font-family=%22Arial, sans-serif%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>S</text></svg>">
 <style>
-  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; max-width: 640px; margin: 80px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+  :root { --bg:#f7f8fa; --card:#ffffff; --text:#16181d; --muted:#6b7280; --accent:#155dfc; --border:#e5e7eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0f1115; --card:#171a21; --text:#f0f1f3; --muted:#9aa1ac; --accent:#4d8dff; --border:#2a2e37; }
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 60px 24px 80px; }
+  header { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+  .logo { width: 28px; height: 28px; border-radius: 7px; background: var(--accent); color: white; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+  .brand { font-weight: 600; }
   h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.1rem; margin-top: 2em; }
-  footer { margin-top: 60px; font-size: 0.85rem; color: #666; }
-  a { color: #1a56db; }
+  h2 { font-size: 1.05rem; margin-top: 2.2em; }
+  p, li { color: var(--text); line-height: 1.65; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+  footer { margin-top: 60px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 20px; }
 </style>
 </head>
 <body>
+<div class="wrap">
+  <header><div class="logo">S</div><div class="brand">SEO_Next</div></header>
+
   <h1>Privacy Policy</h1>
-  <p><em>Last updated: August 2026</em></p>
+  <p class="muted"><em>Last updated: August 2026</em></p>
 
   <p>SEO_Next is an internal application developed and operated by Ged Group S.r.l. ("we", "us"). This policy describes how we handle data in connection with the application's use of Google APIs.</p>
 
@@ -30,7 +45,7 @@
   <p>Data is used exclusively for internal SEO analysis, reporting, and strategy purposes related to the properties for which access was granted. Data is not sold, rented, or shared with unaffiliated third parties.</p>
 
   <h2>How data is stored</h2>
-  <p>OAuth credentials and access tokens are encrypted at rest. Access is restricted to authorized Ged Group personnel.</p>
+  <p>OAuth credentials and access tokens are encrypted at rest. Access is restricted to authorized personnel.</p>
 
   <h2>Google API Services User Data Policy</h2>
   <p>SEO_Next's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
@@ -39,8 +54,9 @@
   <p>You can revoke SEO_Next's access to your Google account at any time via <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.</p>
 
   <h2>Contact</h2>
-  <p>Ged Group S.r.l. — <a href="mailto:marco.lacaria@gedshop.it">marco.lacaria@gedshop.it</a></p>
+  <p>For questions about this policy, please use the <a href="/#contact">contact form</a> on our homepage.</p>
 
-  <footer><a href="/">&larr; Back to SEO_Next</a></footer>
+  <footer>Ged Group S.r.l. · <a href="/">Back to SEO_Next</a></footer>
+</div>
 </body>
 </html>
