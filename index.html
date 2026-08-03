@@ -117,8 +117,9 @@
     color: white;
     font-weight: 600;
     font-size: 0.95rem;
-    cursor: not-allowed;
+    cursor: pointer;
   }
+  button.primary:hover { opacity: 0.92; }
   .fine { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 16px; }
   footer {
     padding: 32px 24px;
@@ -183,14 +184,20 @@
       <div class="card">
         <h2>Sign in</h2>
         <p class="sub">Invite-only workspace access</p>
-        <form onsubmit="return false;">
+        <form id="login-form">
           <label for="email">Work email</label>
-          <input type="email" id="email" placeholder="you@company.com" disabled>
+          <input type="email" id="email" placeholder="you@company.com" required>
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="••••••••" disabled>
-          <button type="submit" class="primary" disabled>Sign in</button>
+          <input type="password" id="password" placeholder="••••••••" required>
+          <button type="submit" class="primary">Sign in</button>
         </form>
-        <p class="fine">Don't have access? Ask your workspace admin for an invite.</p>
+        <p class="fine" id="login-msg">Access is invite-only. Don't have an account? Ask your workspace admin for an invite.</p>
+        <script>
+          document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('login-msg').textContent = 'This workspace is invite-only. If you were expecting access, contact your administrator.';
+          });
+        </script>
       </div>
     </div>
   </main>
